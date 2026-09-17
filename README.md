@@ -262,10 +262,10 @@ This project implements the main requirements of the Movie Explorer assignment:
 ## 🌐 Live Project
 
 **Live Website:**
-`YOUR_LIVE_DEPLOYMENT_URL`
+`https://movie-explorer-eta-orpin.vercel.app`
 
 **GitHub Repository:**
-`YOUR_GITHUB_REPOSITORY_URL`
+`https://github.com/Sifathossensuvo/movie-explorer`
 
 ---
 
