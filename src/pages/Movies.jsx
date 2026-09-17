@@ -51,6 +51,9 @@ const Movies = () => {
     }
   };
 
+
+  
+
   useEffect(() => {
     fetchMovies();
   }, []);

@@ -2,16 +2,21 @@ import { AnimatePresence, motion } from "framer-motion";
 import {
   FiX,
   FiStar,
+
   FiCalendar,
   FiClock,
   FiFilm,
 } from "react-icons/fi";
+
+
 
 const MovieModal = ({ movie, onClose }) => {
   if (!movie) {
     return null;
   }
 
+
+  
   const image =
     movie?.image?.original ||
     movie?.image?.medium ||
@@ -25,15 +30,20 @@ const MovieModal = ({ movie, onClose }) => {
       })
     : "Not available";
 
+
+
+
   const rating = movie?.rating?.average
     ? movie.rating.average.toFixed(1)
     : "N/A";
-
   const summary = movie?.summary
     ? movie.summary.replace(/<[^>]*>/g, "")
     : "No description is available for this title.";
 
+
+
   return (
+
     <AnimatePresence>
       <motion.div
         initial={{ opacity: 0 }}
@@ -42,6 +52,8 @@ const MovieModal = ({ movie, onClose }) => {
         onClick={onClose}
         className="fixed inset-0 z-[200] flex items-center justify-center overflow-y-auto bg-black/80 p-4 backdrop-blur-md sm:p-6"
       >
+
+
         <motion.div
           initial={{ opacity: 0, y: 35, scale: 0.96 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -53,19 +65,24 @@ const MovieModal = ({ movie, onClose }) => {
           onClick={(event) => event.stopPropagation()}
           className="relative my-auto w-full max-w-4xl overflow-hidden rounded-3xl border border-white/10 bg-[#0b0b0b] shadow-2xl shadow-black/50"
         >
-          {/* Close Button */}
+          
+
+
           <motion.button
             whileHover={{ rotate: 90, scale: 1.05 }}
             whileTap={{ scale: 0.9 }}
             onClick={onClose}
-            className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-black/60 text-white/70 backdrop-blur-md transition-colors duration-300 hover:bg-red-500 hover:text-white"
+ className="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-xl border border-white/10 bg-black/60 text-white/70 backdrop-blur-md transition-colors duration-300 hover:bg-red-500 hover:text-white"
             aria-label="Close modal"
           >
             <FiX size={19} />
           </motion.button>
 
+
+
           <div className="grid md:grid-cols-[280px_1fr]">
-            {/* Poster */}
+           
+
             <div className="relative h-[420px] overflow-hidden md:h-full md:min-h-[520px]">
               <img
                 src={image}
@@ -91,7 +108,7 @@ const MovieModal = ({ movie, onClose }) => {
               </div>
             </div>
 
-            {/* Content */}
+            {/* content */}
             <div className="relative p-6 sm:p-8 md:p-10">
               {/* Small Label */}
               <div className="mb-5 flex items-center gap-2">
@@ -107,7 +124,7 @@ const MovieModal = ({ movie, onClose }) => {
                 {movie?.name || "Untitled"}
               </h2>
 
-              {/* Meta */}
+             
               <div className="mt-5 flex flex-wrap items-center gap-3">
                 <div className="flex items-center gap-2 rounded-lg border border-white/10 bg-white/5 px-3 py-2 text-xs text-white/50">
                   <FiCalendar size={13} className="text-red-500" />
@@ -130,7 +147,7 @@ const MovieModal = ({ movie, onClose }) => {
                 )}
               </div>
 
-              {/* Genres */}
+
               {movie?.genres?.length > 0 && (
                 <div className="mt-6 flex flex-wrap gap-2">
                   {movie.genres.map((genre) => (

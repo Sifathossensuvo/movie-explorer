@@ -42,6 +42,9 @@ const Footer = () => {
   };
 
   return (
+
+
+    
     <footer className="relative overflow-hidden border-t border-white/10 bg-[#050505]">
     
       <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-600/10 blur-[120px]" />

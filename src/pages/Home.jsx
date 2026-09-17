@@ -10,10 +10,13 @@ import detailsBg from "../assets/card3.png";
 const Home = () => {
   return (
     <>
-      <Hero />
+      <Hero></Hero>
+
 
       <section className="relative overflow-hidden bg-[#050505] px-5 py-24 sm:px-8 lg:px-10">
         <div className="mx-auto max-w-7xl">
+
+
           <motion.div
             initial={{ y: 30, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
@@ -29,7 +32,7 @@ const Home = () => {
               </span>
             </div>
 
-            <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl md:text-5xl">
+     <h2 className="text-3xl font-black tracking-tight text-white sm:text-4xl md:text-5xl">
               Everything you need to
               <span className="text-white/30"> find your next watch.</span>
             </h2>
@@ -40,6 +43,8 @@ const Home = () => {
               effortless.
             </p>
           </motion.div>
+
+
 
           <div className="mt-14 grid gap-4 md:grid-cols-3">
             <motion.div
@@ -75,6 +80,8 @@ const Home = () => {
                 </p>
               </div>
             </motion.div>
+
+
 
             <motion.div
               initial={{ y: 35, opacity: 0 }}
