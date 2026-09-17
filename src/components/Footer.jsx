@@ -16,7 +16,7 @@ const Footer = () => {
     {
   name: "GitHub",
   icon: <FiGithub size={18} />,
-      href: "https://github.com/",
+      href: "https://github.com/Sifathossensuvo",
     },
     {
       name: "Instagram",
@@ -44,7 +44,7 @@ const Footer = () => {
   return (
 
 
-    
+
     <footer className="relative overflow-hidden border-t border-white/10 bg-[#050505]">
     
       <div className="pointer-events-none absolute -left-40 top-10 h-80 w-80 rounded-full bg-red-600/10 blur-[120px]" />
@@ -62,11 +62,11 @@ const Footer = () => {
       <div className="relative mx-auto max-w-7xl px-5 py-16 sm:px-8 lg:px-10">
         <div className="flex flex-col gap-12 md:flex-row md:items-start md:justify-between">
           <motion.div
-            initial={{ y: 25, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.7 }}
-            className="max-w-md"
+           initial={{ y: 25, opacity: 0 }}
+           whileInView={{ y: 0, opacity: 1 }}
+           viewport={{ once: true }}
+           transition={{ duration: 0.7 }}
+           className="max-w-md"
           >
             <div className="mb-5 flex items-center gap-3">
 
@@ -119,10 +119,11 @@ const Footer = () => {
               >
                 Movies
 
-                <FiArrowUpRight
+            <FiArrowUpRight
                   size={14}
                   className="opacity-0 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 group-hover:opacity-100"
                 />
+                
               </a>
             </div>
           </motion.div>
@@ -158,7 +159,7 @@ const Footer = () => {
           </motion.div>
         </div>
 
-        <div className="my-10 h-px w-full bg-white/10" />
+<div className="my-10 h-px w-full bg-white/10" />
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -171,7 +172,7 @@ const Footer = () => {
           className="flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between"
         >
           <p className="text-xs text-white/30">
-            © {currentYear} sifathossenshuvo. All rights reserved.
+            © {currentYear} MovieExplorer. All rights reserved.
           </p>
 
           <motion.button

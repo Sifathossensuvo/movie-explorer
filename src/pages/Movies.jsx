@@ -20,6 +20,8 @@ const Movies = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
+
+  
   const fetchMovies = async (query = "") => {
     try {
    setLoading(true);
@@ -31,7 +33,10 @@ const Movies = () => {
           )}`
       : "https://api.tvmaze.com/shows";
 
+
       const response = await fetch(url);
+
+
 
       if (!response.ok) {
         throw new Error("Failed to fetch movie data.");
@@ -52,7 +57,7 @@ const Movies = () => {
   };
 
 
-  
+
 
   useEffect(() => {
     fetchMovies();
@@ -203,7 +208,7 @@ window.addEventListener("keydown", handleEscape);
 
           {!loading && movies.length > 0 && (
             <div className="hidden items-center gap-2 sm:flex">
-              <span className="h-2 w-2 animate-pulse rounded-full bg-red-500" />
+           
 
               <span className="text-xs text-white/30">
                 Live data

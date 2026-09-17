@@ -112,7 +112,7 @@ const MovieModal = ({ movie, onClose }) => {
             <div className="relative p-6 sm:p-8 md:p-10">
               {/* Small Label */}
               <div className="mb-5 flex items-center gap-2">
-                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-red-500" />
+               
 
                 <span className="text-[10px] font-bold uppercase tracking-[3px] text-red-500">
                   Movie Details
